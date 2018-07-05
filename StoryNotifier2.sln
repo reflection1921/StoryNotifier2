@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "StoryNotifier2", "StoryNotifier2\StoryNotifier2.vbproj", "{CD2B1D89-1235-478D-9518-EBF531EF97C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD2B1D89-1235-478D-9518-EBF531EF97C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD2B1D89-1235-478D-9518-EBF531EF97C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD2B1D89-1235-478D-9518-EBF531EF97C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD2B1D89-1235-478D-9518-EBF531EF97C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3EF5C1D3-987B-42C7-8268-0004304DCF2E}
+	EndGlobalSection
+EndGlobal
