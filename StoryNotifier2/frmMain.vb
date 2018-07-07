@@ -66,13 +66,20 @@ Public Class frmMain
 
         NotyID = tmpNotyID
 
-        Dim message As String = notyJson.Item(0).Item("message")
-        Dim content As String = notyJson.Item(0).Item("content")
-        Dim scheme As String = notyJson.Item(0).Item("scheme")
-        NotyURL = Split(Split(scheme, "kakaostory://activities/")(1), "?")(0)
-        NotyURL = NotyURL.Replace(".", "/")
+        Try
+            Dim message As String = notyJson.Item(0).Item("message")
+            Dim content As String = notyJson.Item(0).Item("content")
+            Dim scheme As String = notyJson.Item(0).Item("scheme")
+            NotyURL = Split(Split(scheme, "kakaostory://activities/")(1), "?")(0)
+            NotyURL = NotyURL.Replace(".", "/")
 
-        NotifyBalloon(message & " " & content)
+            NotifyBalloon(message & " " & content)
+
+        Catch ex As Exception
+            Exit Sub
+        End Try
+
+
     End Sub
 
     Public Sub initializeNotify()
