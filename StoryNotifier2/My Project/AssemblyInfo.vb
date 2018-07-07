@@ -9,10 +9,10 @@ Imports System.Runtime.InteropServices
 ' 어셈블리 특성 값을 검토합니다.
 
 <Assembly: AssemblyTitle("StoryNotifier2")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyDescription("KakaoStory Notifier for Windows")>
+<Assembly: AssemblyCompany("Reflection")>
 <Assembly: AssemblyProduct("StoryNotifier2")>
-<Assembly: AssemblyCopyright("Copyright ©  2018")>
+<Assembly: AssemblyCopyright("Copyright © Refelction 2018")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' 지정되도록 할 수 있습니다.
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("1.0.0.0")>
-<Assembly: AssemblyFileVersion("1.0.0.0")>
+<Assembly: AssemblyVersion("2.0.0.0")>
+<Assembly: AssemblyFileVersion("2.0.0.0")>
