@@ -155,4 +155,28 @@ Public Class frmMain
         configJson.Add("writeLogs", chkLog.Checked)
         File.WriteAllText("config.json", configJson.ToString)
     End Sub
+
+    Private Sub timerConnect_Tick(sender As Object, e As EventArgs) Handles timerConnect.Tick
+        Try
+            With IE
+                .Open("GET", "https://story.kakao.com/a/notifications")
+                .SetRequestHeader("Host", "story.kakao.com")
+                .SetRequestHeader("User-Agent", "Mozilla/5.0 (Windows NT 6.1; rv:35.0) Gecko/20100101 Firefox/35.0")
+                .SetRequestHeader("Accept", "application/json")
+                .SetRequestHeader("Accept-Language", "ko")
+                .SetRequestHeader("Connection", "keep-alive")
+                .SetRequestHeader("X-Kakao-ApiLevel", "31")
+                .SetRequestHeader("X-Kakao-DeviceInfo", "web:-;-;-")
+                .SetRequestHeader("X-Requested-With", "XMLHttpRequest")
+                .SetRequestHeader("Cookie", loginCookie)
+                .SetRequestHeader("Referer", "https://story.kakao.com/")
+                .Send()
+            End With
+        Catch ex As Exception
+            Exit Sub
+        End Try
+
+        timerConnect.Enabled = False
+        timerNoty.Enabled = True
+    End Sub
 End Class

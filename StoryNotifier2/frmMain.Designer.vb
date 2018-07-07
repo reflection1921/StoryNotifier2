@@ -121,6 +121,10 @@ Partial Class frmMain
         '
         Me.timerNoty.Interval = 1000
         '
+        'timerConnect
+        '
+        Me.timerConnect.Interval = 2000
+        '
         'txtTime
         '
         Me.txtTime.Location = New System.Drawing.Point(107, 51)
