@@ -3,6 +3,9 @@ Imports System.Text
 Imports Newtonsoft.Json.Linq
 
 Public Class frmLogin
+    Dim IE As New WinHttp.WinHttpRequest
+    Dim Version As Integer = "20"
+
     <DllImport("wininet.dll", CharSet:=CharSet.Auto, SetLastError:=True)>
     Private Shared Function InternetGetCookieEx(ByVal pchURL As String, ByVal pchCookieName As String, ByVal pchCookieData As StringBuilder, ByRef pcchCookieData As UInteger, ByVal dwFlags As Integer, ByVal lpReserved As IntPtr) As Boolean
     End Function
@@ -32,4 +35,14 @@ Public Class frmLogin
         End If
     End Sub
 
+    Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        IE.Open("GET", "chihaya.kr/snoty/version/version.txt")
+        IE.Send()
+
+        If Int(IE.ResponseText) > Version Then
+            If MsgBox("새 버전이 존재합니다. 프로그램을 다운로더 하시겠습니까?", MsgBoxStyle.YesNo + MsgBoxStyle.Information, "Story Notifier 2") = MsgBoxResult.Yes Then
+                Process.Start("explorer.exe", "http://chihaya.kr")
+            End If
+        End If
+    End Sub
 End Class

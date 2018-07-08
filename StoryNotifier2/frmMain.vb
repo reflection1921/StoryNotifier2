@@ -70,13 +70,10 @@ Public Class frmMain
             Dim message As String = notyJson.Item(0).Item("message")
             Dim content As String = notyJson.Item(0).Item("content")
             Dim scheme As String = notyJson.Item(0).Item("scheme")
-            NotyURL = Split(Split(scheme, "kakaostory://activities/")(1), "?")(0)
+            NotyURL = scheme.Replace("kakaostory://", "")
             NotyURL = NotyURL.Replace(".", "/")
-
             NotifyBalloon(message & " " & content)
-
-        Catch ex As Exception
-            Exit Sub
+        Catch ex As exception
         End Try
 
 
@@ -120,13 +117,6 @@ Public Class frmMain
         Process.Start("explorer.exe", "https://story.kakao.com/" & NotyURL)
     End Sub
 
-    Private Sub chkLog_CheckedChanged(sender As Object, e As EventArgs) Handles chkLog.CheckedChanged
-        Dim configJson As New JObject
-        configJson.Add("refreshTime", txtTime.Text)
-        configJson.Add("writeLogs", chkLog.Checked)
-        File.WriteAllText("config.json", configJson.ToString)
-    End Sub
-
     Public Sub writeLog(str As String)
         If chkLog.Checked = True Then
             Dim SW As StreamWriter
@@ -161,6 +151,7 @@ Public Class frmMain
         configJson.Add("refreshTime", txtTime.Text)
         configJson.Add("writeLogs", chkLog.Checked)
         File.WriteAllText("config.json", configJson.ToString)
+
     End Sub
 
     Private Sub timerConnect_Tick(sender As Object, e As EventArgs) Handles timerConnect.Tick

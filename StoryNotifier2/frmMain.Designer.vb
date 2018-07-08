@@ -127,7 +127,7 @@ Partial Class frmMain
         '
         'txtTime
         '
-        Me.txtTime.Location = New System.Drawing.Point(107, 51)
+        Me.txtTime.Location = New System.Drawing.Point(130, 51)
         Me.txtTime.Name = "txtTime"
         Me.txtTime.Size = New System.Drawing.Size(15, 21)
         Me.txtTime.TabIndex = 2
@@ -137,7 +137,7 @@ Partial Class frmMain
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(128, 54)
+        Me.Label2.Location = New System.Drawing.Point(151, 54)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(17, 12)
         Me.Label2.TabIndex = 3
@@ -146,7 +146,7 @@ Partial Class frmMain
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 54)
+        Me.Label3.Location = New System.Drawing.Point(35, 54)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(89, 12)
         Me.Label3.TabIndex = 4
@@ -154,9 +154,9 @@ Partial Class frmMain
         '
         'btnApply
         '
-        Me.btnApply.Location = New System.Drawing.Point(151, 49)
+        Me.btnApply.Location = New System.Drawing.Point(6, 78)
         Me.btnApply.Name = "btnApply"
-        Me.btnApply.Size = New System.Drawing.Size(42, 23)
+        Me.btnApply.Size = New System.Drawing.Size(187, 23)
         Me.btnApply.TabIndex = 5
         Me.btnApply.Text = "적용"
         Me.btnApply.UseVisualStyleBackColor = True
@@ -165,7 +165,7 @@ Partial Class frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(199, 79)
+        Me.ClientSize = New System.Drawing.Size(199, 107)
         Me.Controls.Add(Me.btnApply)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
