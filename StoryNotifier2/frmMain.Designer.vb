@@ -41,6 +41,12 @@ Partial Class frmMain
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnApply = New System.Windows.Forms.Button()
+        Me.chkCNoty = New System.Windows.Forms.CheckBox()
+        Me.pnlSetColor = New System.Windows.Forms.Panel()
+        Me.labelSetColor = New System.Windows.Forms.Label()
+        Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
+        Me.chkProfile = New System.Windows.Forms.CheckBox()
+        Me.chkSound = New System.Windows.Forms.CheckBox()
         Me.notifyMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -55,11 +61,11 @@ Partial Class frmMain
         '
         'chkLog
         '
-        Me.chkLog.Location = New System.Drawing.Point(38, 27)
+        Me.chkLog.Location = New System.Drawing.Point(20, 27)
         Me.chkLog.Name = "chkLog"
         Me.chkLog.Size = New System.Drawing.Size(131, 18)
         Me.chkLog.TabIndex = 1
-        Me.chkLog.Text = "로그를 작성합니다."
+        Me.chkLog.Text = "로그 작성"
         Me.chkLog.UseVisualStyleBackColor = True
         '
         'notifyIcon
@@ -72,49 +78,49 @@ Partial Class frmMain
         '
         Me.notifyMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.viewSNotyForm, Me.moveRecentNoty, Me.myStory, Me.개발자정보ToolStripMenuItem, Me.Quit})
         Me.notifyMenu.Name = "notifyMenu"
-        Me.notifyMenu.Size = New System.Drawing.Size(155, 114)
+        Me.notifyMenu.Size = New System.Drawing.Size(181, 136)
         '
         'viewSNotyForm
         '
         Me.viewSNotyForm.Name = "viewSNotyForm"
-        Me.viewSNotyForm.Size = New System.Drawing.Size(154, 22)
+        Me.viewSNotyForm.Size = New System.Drawing.Size(180, 22)
         Me.viewSNotyForm.Text = "SNoty 보이기"
         '
         'moveRecentNoty
         '
         Me.moveRecentNoty.Name = "moveRecentNoty"
-        Me.moveRecentNoty.Size = New System.Drawing.Size(154, 22)
+        Me.moveRecentNoty.Size = New System.Drawing.Size(180, 22)
         Me.moveRecentNoty.Text = "최근 알림 이동"
         '
         'myStory
         '
         Me.myStory.Name = "myStory"
-        Me.myStory.Size = New System.Drawing.Size(154, 22)
+        Me.myStory.Size = New System.Drawing.Size(180, 22)
         Me.myStory.Text = "내 스토리"
         '
         '개발자정보ToolStripMenuItem
         '
         Me.개발자정보ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.visitDevleopers, Me.AppInfo})
         Me.개발자정보ToolStripMenuItem.Name = "개발자정보ToolStripMenuItem"
-        Me.개발자정보ToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
+        Me.개발자정보ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.개발자정보ToolStripMenuItem.Text = "정보"
         '
         'visitDevleopers
         '
         Me.visitDevleopers.Name = "visitDevleopers"
-        Me.visitDevleopers.Size = New System.Drawing.Size(162, 22)
+        Me.visitDevleopers.Size = New System.Drawing.Size(180, 22)
         Me.visitDevleopers.Text = "개발자 웹사이트"
         '
         'AppInfo
         '
         Me.AppInfo.Name = "AppInfo"
-        Me.AppInfo.Size = New System.Drawing.Size(162, 22)
+        Me.AppInfo.Size = New System.Drawing.Size(180, 22)
         Me.AppInfo.Text = "프로그램 정보"
         '
         'Quit
         '
         Me.Quit.Name = "Quit"
-        Me.Quit.Size = New System.Drawing.Size(154, 22)
+        Me.Quit.Size = New System.Drawing.Size(180, 22)
         Me.Quit.Text = "종료"
         '
         'timerNoty
@@ -127,7 +133,7 @@ Partial Class frmMain
         '
         'txtTime
         '
-        Me.txtTime.Location = New System.Drawing.Point(130, 51)
+        Me.txtTime.Location = New System.Drawing.Point(113, 138)
         Me.txtTime.Name = "txtTime"
         Me.txtTime.Size = New System.Drawing.Size(15, 21)
         Me.txtTime.TabIndex = 2
@@ -137,7 +143,7 @@ Partial Class frmMain
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(151, 54)
+        Me.Label2.Location = New System.Drawing.Point(134, 141)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(17, 12)
         Me.Label2.TabIndex = 3
@@ -146,7 +152,7 @@ Partial Class frmMain
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(35, 54)
+        Me.Label3.Location = New System.Drawing.Point(18, 141)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(89, 12)
         Me.Label3.TabIndex = 4
@@ -154,24 +160,77 @@ Partial Class frmMain
         '
         'btnApply
         '
-        Me.btnApply.Location = New System.Drawing.Point(6, 78)
+        Me.btnApply.Location = New System.Drawing.Point(6, 165)
         Me.btnApply.Name = "btnApply"
         Me.btnApply.Size = New System.Drawing.Size(187, 23)
         Me.btnApply.TabIndex = 5
-        Me.btnApply.Text = "적용"
+        Me.btnApply.Text = "저장"
         Me.btnApply.UseVisualStyleBackColor = True
+        '
+        'chkCNoty
+        '
+        Me.chkCNoty.AutoSize = True
+        Me.chkCNoty.Location = New System.Drawing.Point(20, 118)
+        Me.chkCNoty.Name = "chkCNoty"
+        Me.chkCNoty.Size = New System.Drawing.Size(144, 16)
+        Me.chkCNoty.TabIndex = 6
+        Me.chkCNoty.Text = "윈도우 기본 알림 사용"
+        Me.chkCNoty.UseVisualStyleBackColor = True
+        '
+        'pnlSetColor
+        '
+        Me.pnlSetColor.BackColor = System.Drawing.Color.White
+        Me.pnlSetColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pnlSetColor.Location = New System.Drawing.Point(20, 97)
+        Me.pnlSetColor.Name = "pnlSetColor"
+        Me.pnlSetColor.Size = New System.Drawing.Size(13, 13)
+        Me.pnlSetColor.TabIndex = 7
+        '
+        'labelSetColor
+        '
+        Me.labelSetColor.AutoSize = True
+        Me.labelSetColor.Location = New System.Drawing.Point(36, 97)
+        Me.labelSetColor.Name = "labelSetColor"
+        Me.labelSetColor.Size = New System.Drawing.Size(57, 12)
+        Me.labelSetColor.TabIndex = 8
+        Me.labelSetColor.Text = "색상 설정"
+        '
+        'chkProfile
+        '
+        Me.chkProfile.AutoSize = True
+        Me.chkProfile.Location = New System.Drawing.Point(20, 51)
+        Me.chkProfile.Name = "chkProfile"
+        Me.chkProfile.Size = New System.Drawing.Size(116, 16)
+        Me.chkProfile.TabIndex = 9
+        Me.chkProfile.Text = "프로필 사진 로드"
+        Me.chkProfile.UseVisualStyleBackColor = True
+        '
+        'chkSound
+        '
+        Me.chkSound.AutoSize = True
+        Me.chkSound.Location = New System.Drawing.Point(20, 74)
+        Me.chkSound.Name = "chkSound"
+        Me.chkSound.Size = New System.Drawing.Size(88, 16)
+        Me.chkSound.TabIndex = 10
+        Me.chkSound.Text = "알림 사운드"
+        Me.chkSound.UseVisualStyleBackColor = True
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(199, 107)
+        Me.ClientSize = New System.Drawing.Size(199, 200)
+        Me.Controls.Add(Me.chkSound)
+        Me.Controls.Add(Me.labelSetColor)
+        Me.Controls.Add(Me.pnlSetColor)
+        Me.Controls.Add(Me.chkCNoty)
         Me.Controls.Add(Me.btnApply)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtTime)
         Me.Controls.Add(Me.chkLog)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.chkProfile)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
@@ -201,4 +260,10 @@ Partial Class frmMain
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents btnApply As Button
+    Friend WithEvents chkCNoty As CheckBox
+    Friend WithEvents pnlSetColor As Panel
+    Friend WithEvents labelSetColor As Label
+    Friend WithEvents ColorDialog1 As ColorDialog
+    Friend WithEvents chkProfile As CheckBox
+    Friend WithEvents chkSound As CheckBox
 End Class
