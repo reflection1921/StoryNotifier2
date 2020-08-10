@@ -158,6 +158,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <None Include="README.md" />
     <None Include="Resources\juntos.wav" />
     <None Include="Resources\square_.png" />
     <None Include="Resources\default_profile.jpg" />
